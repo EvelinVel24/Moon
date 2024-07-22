@@ -5,8 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="luna.css">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Arroz</td>
+                <td>1.800</td>
+            </tr>
+            <tr>
+                <td>Fideos</td>
+                <td>1.000</td>
+            </tr>
+        </tbody>
+       <tfoot>
+            <td>Total</td>
+            <td>2.800</td> 
+       </tfoot>
+    </table>
+    <ul>
+        <li>item de listas</li>
+        <li>ELEMENTO 2</li>
+        <li>ELEMENTO 3</li>
+        <li>ELEMENTO 4</li>
+    </ul>
+    <ol>
+        <li value="50">item de listas</li>
+        <li>ELEMENTO 2</li>
+        <li>ELEMENTO 3</li>
+        <li>ELEMENTO 4</li>
+        <li>
+            <ol>
+                <li value="55">sub elemento</li>
+            </ol>
+        </li>
+    </ol>
+
     <h1>Porque Lucifer Jesus Satanas Chucky DiCaprio es el bebe mas guapo de la historia</h1>
     <img src="luci.jpeg"/>   
     <h1>Sera porque se parece a su madre y mami?</h1>  
@@ -14,9 +59,17 @@
     <h1>o es realmente porque se parece a su <span style="color: red;">padre</span>?</h1>
     <img src="https://i.pinimg.com/474x/07/3f/a7/073fa7daf5daa60b7c2f9673d5fb8525.jpg" width="400">
     <a target="_blank" href="https://www.google.cl/?hl=es">ir a google</a>
-    <form>
-        <label for="lucifer">A quien se parece el bebe?</label>
-        <input type="text" id="lucifer" name="nombre" placeholder="Mamá/Papá" />
+    <form action="/rutadeformulario" method="GET">
+        <label for="pregunta">A quien se parece el bebe?</label>
+        <input type="text" id="pregunta" name="pregunta" placeholder="Mamá/Papá" />
+        <br/>
+        <label for="lucifer">Que te parece su nombre?</label>
+        <input type="text" id="lucifer" name="lucifer" placeholder="Bueno/Malo" />
+        <br/>
+        <label for="comentario">comentario</label>
+        <textarea rows="5" cols="50" id="comentario" placeholder="ingrese comentario" name="comentario"></textarea>
+        <br>
+        <input type="submit" />
     </form>
 </body>
 </html>
